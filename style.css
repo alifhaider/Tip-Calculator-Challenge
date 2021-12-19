@@ -27,8 +27,8 @@ p {
 }
 
 input {
-  padding: 2px 15px;
   width: 100%;
+  padding: 2px 15px;
   background-color: var(--secondLightGrayish);
   color: var(--darkCyan);
   font-size: 24px;
@@ -37,6 +37,43 @@ input {
   border-radius: 5px;
   direction: rtl;
   transition: all 0.3s ease;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  position: relative;
+}
+
+.input::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 15px;
+  transform: translate(0%, -50%);
+  background: url("./images/icon-dollar.svg");
+  background-repeat: no-repeat;
+}
+
+.people {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.people::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 15px;
+  transform: translate(0%, -50%);
+  background: url("./images/icon-person.svg");
+  background-repeat: no-repeat;
 }
 
 .marginBottom {

@@ -41,7 +41,10 @@
         <div class="calculatorBox">
           <div class="left">
             <p class="leftText">Bill</p>
-            <input id="bill" value="" class="space" type="text" placeholder="0" />
+            <div class="input">
+              <input id="bill" value="" class="bill space" type="text" placeholder="0" />
+            </div>
+            
             <p class="leftText marginBottom">Select Tip %</p>
             <div class="Row">
               <button onclick="changeTip(5)" class="button button1 rightSpace">5%</button>
@@ -54,7 +57,9 @@
               <input id="custom" value="" class="custom" type="text" placeholder="Custom" />
             </div>
             <p class="leftText topSpace"><span>Number of People</span><span class="warning">Can't be empty</span></p>
-            <input id="people" value="" type="text" placeholder="0" />
+            <div class="people">
+              <input id="people" value="" type="text" placeholder="0" />
+            </div>
           </div>
           <div class="right">
             <div class="rightContainer">
