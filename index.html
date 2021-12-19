@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="viewBox">
+      <div class="container">
+        <div class="titleBox">
+          <h1 class="title">Spli</h1>
+          <h1 class="title">TTer</h1>
+        </div>
+        <div class="calculatorBox">
+          <div class="left">
+            <p class="leftText">Bill</p>
+            <input id="bill" value="" class="space" type="text" placeholder="0" />
+            <p class="leftText marginBottom">Select Tip %</p>
+            <div class="Row">
+              <button onclick="changeTip(5)" class="button button1 rightSpace">5%</button>
+              <button onclick="changeTip(10)" class="button button2 rightSpace">10%</button>
+              <button onclick="changeTip(15)" class="button button3">15%</button>
+            </div>
+            <div class="Row">
+              <button onclick="changeTip(25)" class="button button4 rightSpace">25%</button>
+              <button onclick="changeTip(50)" class="button button5 rightSpace">50%</button>
+              <input id="custom" value="" class="custom" type="text" placeholder="Custom" />
+            </div>
+            <p class="leftText topSpace"><span>Number of People</span><span class="warning">Can't be empty</span></p>
+            <input id="people" value="" type="text" placeholder="0" />
+          </div>
+          <div class="right">
+            <div class="rightContainer">
+              <div class="top">
+                <div class="rightContentBox space">
+                  <div class="content">
+                    <p class="rightText">Tip Amount</p>
+                    <p class="rightSubtext">/ <span class="subTextSpace">person </span></p>
+                  </div>
+                  <p class="value">$<span class="tip">0.00</span></p>
+                </div>
+                <div class="rightContentBox">
+                  <div class="content">
+                    <p class="rightText">Total</p>
+                    <p class="rightSubtext">/ <span class="subTextSpace">person </span></p>
+                  </div>
+                  <p class="value">$<span class="total">0.00</span></p>
+                </div>
+              </div>
+              <div class="bottom">
+                <button onclick="reset()" class="reset">Reset</button>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="calculatorContainer"></div>
+    </section>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="./App.js"></script>
+  </body>
+</html>

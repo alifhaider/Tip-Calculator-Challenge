@@ -1,0 +1,229 @@
+:root {
+  --strongCyan: hsl(172, 67%, 45%);
+  --darkCyan: hsl(183, 100%, 15%);
+  --mainCyan: hsl(186, 14%, 43%);
+  --darkGrayishCyan: hsl(184, 14%, 56%);
+  --lightGrayish: hsl(185, 41%, 84%);
+  --secondLightGrayish: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  font-size: 24px;
+  background-color: var(--lightGrayish);
+}
+
+p {
+  color: var(--mainCyan);
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+input {
+  padding: 2px 15px;
+  width: 100%;
+  background-color: var(--secondLightGrayish);
+  color: var(--darkCyan);
+  font-size: 24px;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  direction: rtl;
+  transition: all 0.3s ease;
+}
+
+.marginBottom {
+  margin-bottom: 16px;
+}
+
+.topSpace {
+  margin-top: 30px;
+}
+
+.space {
+  margin-bottom: 30px;
+}
+
+.viewBox {
+  width: 100%;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.titleBox {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.title {
+  font-size: 24px;
+  line-height: 1.4;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: var(--darkCyan);
+}
+
+.calculatorBox {
+  margin: 5% auto;
+  padding: 40px 50px;
+  width: 800px;
+  min-height: 400px;
+  border-radius: 30px;
+  background-color: var(--white);
+  display: flex;
+}
+
+.left {
+  flex: 1;
+  padding-right: 30px;
+}
+
+.leftText {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+  color: var(--darkCyan);
+}
+
+.warning {
+  opacity: 0;
+  font-size: 12px;
+  color: red;
+  transition: all 0.3s ease;
+}
+
+input::placeholder {
+  color: var(--darkGrayishCyan);
+}
+
+input:focus {
+  direction: rtl;
+  outline: 2px solid var(--lightGrayish);
+}
+
+.right {
+  flex: 1;
+  padding-left: 20px;
+  position: relative;
+}
+
+.rightContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--darkCyan);
+  border-radius: 10px;
+  padding: 40px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.rightSpace {
+  margin-right: 8px;
+}
+
+.button {
+  flex: 1;
+  padding: 10px 0;
+  border-radius: 5px;
+  background-color: var(--darkCyan);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--white);
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--lightGrayish);
+  color: var(--darkCyan);
+}
+
+.custom {
+  flex: 1;
+  border-radius: 5px;
+  background-color: var(--darkCyan);
+  border: none;
+  font-size: 16px;
+  color: var(--white);
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  padding-right: 10px;
+  color: var(--darkCyan);
+  background-color: var(--secondLightGrayish);
+}
+
+.custom::placeholder {
+  color: var(--darkGrayishCyan);
+}
+
+.top {
+  flex: 1;
+}
+
+.rightContentBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rightText {
+  color: var(--secondLightGrayish);
+}
+
+.rightSubtext {
+  color: var(--darkGrayishCyan);
+}
+
+.value {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--strongCyan);
+}
+
+.reset {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  background-color: var(--strongCyan);
+  color: var(--darkCyan);
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.reset:hover {
+  background-color: var(--lightGrayish);
+}
+
+@media only screen and (max-width: 450px) {
+  .custom {
+    letter-spacing: 0.2px;
+  }
+  .calculatorBox {
+    width: 100%;
+    height: 800px;
+    flex-direction: column;
+  }
+}
